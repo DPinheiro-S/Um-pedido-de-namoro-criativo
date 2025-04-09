@@ -1,0 +1,101 @@
+
+  /* Estilos gerais */
+  body {
+    background-image: url("https://i0.wp.com/site.studioghibli.com.br/wp-content/uploads/2014/02/P05IM11.jpg");
+    background-size: cover;
+    margin: 0;
+    display: flex; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 80vh; /* Garante que o body ocupa toda a altura da tela */
+  }
+
+  #conteudo {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  h1 {
+    background-color: aliceblue;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  h1:hover {
+    background-color: lightcyan;
+  }
+
+  .btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Aumenta o padding para acomodar os ícones */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin: 10px; /* Adiciona margem entre os botões */
+    display: inline-flex; /* Permite alinhar ícones e texto */
+    align-items: center; /* Alinha verticalmente */
+  }
+
+  .btn:hover {
+    transform: scale(1.1);
+  }
+
+  /* Estilos para os ícones */
+  .btn i {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+  }
+
+  /* Animação de pulso */
+  .btn.pulse {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Animação de tremor */
+  .btn.shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+  }
+
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+  /* Efeito de brilho */
+  .btn.glow:hover {
+    box-shadow: 0 0 10px #007bff;
+  }
+
+  /* Media queries para responsividade */
+  @media (max-width: 600px) {
+    .btn {
+      width: auto; /* Ajusta a largura dos botões */
+      padding: 10px; /* Ajusta o padding */
+    }
+  }
